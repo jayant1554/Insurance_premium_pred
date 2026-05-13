@@ -1,9 +1,12 @@
 # Basic Import
 import numpy as np
 import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 from sklearn.tree import DecisionTreeRegressor
 from src.exception import CustomException
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from xgboost import XGBRegressor
 from src.logger import logging
 
 from src.utils import save_object
@@ -37,8 +40,11 @@ class ModelTrainer:
             'Lasso':Lasso(),
             'Ridge':Ridge(),
             'Elasticnet':ElasticNet(),
-            'DecisionTree':DecisionTreeRegressor()
-        }
+            'DecisionTree':DecisionTreeRegressor(),
+            'RandomForest': RandomForestRegressor(),
+            'GradientBoosting': GradientBoostingRegressor(),
+            'XGBoost': XGBRegressor()
+            }
             
             model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
             print(model_report)

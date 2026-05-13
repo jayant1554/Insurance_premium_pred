@@ -1,5 +1,14 @@
-Metadata-Version: 2.1
-Name: insurance-premium-pred
+Metadata-Version: 2.4
+Name: insurance_premium_pred
 Version: 0.0.1
 Author: jayant
 Author-email: jk913600@gmail.com
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: streamlit
+Requires-Dist: flask
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
